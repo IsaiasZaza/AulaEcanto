@@ -5,13 +5,14 @@ const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Aulas", href: "#aulas" },
   { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Local", href: "#localizacao" },
   { label: "Contato", href: "#contato" },
 ] as const;
 
 const socialLinks = [
-  { icon: Camera, href: "https://wa.me/SEUNUMERO", label: "Instagram" },
-  { icon: PlayCircle, href: "https://wa.me/SEUNUMERO", label: "YouTube" },
-  { icon: Music, href: "https://wa.me/SEUNUMERO", label: "TikTok" },
+  { icon: Camera, href: "https://www.instagram.com/professordecanto.julio/", label: "Instagram" },
+  { icon: PlayCircle, href: "https://wa.me/556196999515", label: "YouTube" },
+  { icon: Music, href: "https://www.youtube.com/watch?v=LBFiG7Gwudw", label: "TikTok" },
 ];
 
 export function Footer() {
@@ -70,7 +71,7 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass soft-hover flex size-11 items-center justify-center rounded-xl text-blue-100 ring-1 ring-white/[0.06] transition-colors hover:text-white"
+                  className="glass soft-hover flex size-10 items-center justify-center rounded-xl text-blue-100 ring-1 ring-white/[0.06] transition-colors hover:text-white"
                   aria-label={label}
                 >
                   <Icon className="size-[1.05rem]" />

@@ -38,7 +38,7 @@ export function Hero() {
           style={{ animationDelay: "0.15s" }}
         >
           <Image
-            src="/4.jpeg"
+            src="/Julio.jpeg"
             alt="Ilustração de cantora em aula de canto"
             width={640}
             height={640}

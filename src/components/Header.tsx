@@ -9,6 +9,7 @@ const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Aulas", href: "#aulas" },
   { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Local", href: "#localizacao" },
   { label: "Contato", href: "#contato" },
 ] as const;
 

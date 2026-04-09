@@ -5,7 +5,7 @@ type WhatsAppButtonProps = {
   className?: string;
 };
 
-const whatsappHref = "https://wa.me/556192289797";
+const whatsappHref = "https://wa.me/556196999515";
 
 export function WhatsAppButton({ label, className = "" }: WhatsAppButtonProps) {
   return (
