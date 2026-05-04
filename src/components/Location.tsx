@@ -15,7 +15,7 @@ export function Location() {
   return (
     <section
       id="localizacao"
-      className="section-shell relative w-full min-w-0 py-16 sm:py-20"
+      className="section-shell section-divider relative w-full min-w-0 py-16 sm:py-20"
     >
       <div
         className="pointer-events-none absolute right-0 top-1/4 -z-10 h-64 w-64 translate-x-1/4 rounded-full bg-[#8ec5ff]/10 blur-3xl"
@@ -61,6 +61,11 @@ export function Location() {
               <p className="mt-2 max-w-sm text-sm leading-relaxed text-blue-200">
                 Use o Google Maps para rotas em carro, transporte publico ou a pe.
               </p>
+              <ul className="mt-4 space-y-2 text-sm text-blue-100/95">
+                <li>Taguatinga Norte, Brasilia - DF</li>
+                <li>Atendimento com agendamento</li>
+                <li>Aulas presenciais e acompanhamento continuo</li>
+              </ul>
             </div>
 
             {hasLink ? (

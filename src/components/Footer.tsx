@@ -1,4 +1,5 @@
 import { Camera, Music, PlayCircle } from "lucide-react";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 const navItems = [
   { label: "Início", href: "#inicio" },
@@ -11,8 +12,8 @@ const navItems = [
 
 const socialLinks = [
   { icon: Camera, href: "https://www.instagram.com/professordecanto.julio/", label: "Instagram" },
-  { icon: PlayCircle, href: "https://wa.me/556196999515", label: "YouTube" },
-  { icon: Music, href: "https://www.youtube.com/watch?v=LBFiG7Gwudw", label: "TikTok" },
+  { icon: PlayCircle, href: "https://www.youtube.com/watch?v=LBFiG7Gwudw", label: "YouTube" },
+  { icon: Music, href: "https://wa.me/556196999515", label: "WhatsApp" },
 ];
 
 export function Footer() {
@@ -29,7 +30,7 @@ export function Footer() {
           <div className="min-w-0 max-w-md space-y-3">
             <a
               href="#inicio"
-              className="inline-block text-xl font-semibold tracking-tight text-white transition hover:text-[#8ec5ff]"
+              className="inline-block text-xl font-semibold tracking-tight text-white transition hover:text-[#84d7ff]"
             >
               Estudio Vocal
             </a>
@@ -37,6 +38,12 @@ export function Footer() {
               Aula de canto com Julio Petros e Thassya Helena — tecnica, arte e
               acompanhamento de perto.
             </p>
+            <div className="pt-2">
+              <WhatsAppButton
+                label="Agendar aula agora"
+                className="px-5 py-2.5 text-xs sm:text-sm"
+              />
+            </div>
           </div>
 
           <nav

@@ -9,7 +9,7 @@ import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full min-w-0 bg-[#0b1f3a]">
+    <div className="min-h-screen w-full min-w-0 bg-[#070f1d]">
       <Header />
       <main className="w-full min-w-0">
         <Hero />

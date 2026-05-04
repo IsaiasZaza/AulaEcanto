@@ -175,10 +175,11 @@ export function Testimonials() {
 
   useEffect(() => {
     if (!emblaApi) return;
-    onReInit();
+    const rafId = window.requestAnimationFrame(onReInit);
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onReInit);
     return () => {
+      window.cancelAnimationFrame(rafId);
       emblaApi.off("select", onSelect);
       emblaApi.off("reInit", onReInit);
     };
@@ -187,7 +188,7 @@ export function Testimonials() {
   return (
     <section
       id="depoimentos"
-      className="section-shell w-full min-w-0 py-16 sm:py-20"
+      className="section-shell section-divider w-full min-w-0 py-16 sm:py-20"
     >
       <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
         <p className="section-subtitle">Depoimentos</p>
@@ -197,6 +198,11 @@ export function Testimonials() {
         <p className="mt-4 text-sm leading-relaxed text-blue-100/90 sm:text-base">
           Historias reais de quem transformou a voz e a confianca no palco.
         </p>
+        <div className="mt-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.03] px-4 py-2 text-xs text-blue-100 sm:text-sm">
+          <StarRow />
+          <span className="font-medium text-white">4.9/5 em media</span>
+          <span className="text-blue-200/90">+300 avaliacoes</span>
+        </div>
       </div>
 
       <div
@@ -218,8 +224,25 @@ export function Testimonials() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col items-center gap-5 sm:mt-10 sm:flex-row sm:justify-center sm:gap-8">
-
+        <div className="mt-8 flex flex-col items-center gap-5 sm:mt-10 sm:gap-8">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={scrollPrev}
+              className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/[0.04] text-white transition hover:border-[#84d7ff]/60 hover:bg-white/10"
+              aria-label="Depoimento anterior"
+            >
+              <ChevronLeft className="size-5" />
+            </button>
+            <button
+              type="button"
+              onClick={scrollNext}
+              className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-white/[0.04] text-white transition hover:border-[#84d7ff]/60 hover:bg-white/10"
+              aria-label="Proximo depoimento"
+            >
+              <ChevronRight className="size-5" />
+            </button>
+          </div>
           <div
             className="flex max-w-full flex-wrap justify-center gap-2 px-2"
             role="group"

@@ -6,18 +6,21 @@ const classes = [
     description:
       "Base tecnica para respirar melhor, afinar com consistencia e cantar com confianca.",
     icon: Mic2,
+    fit: "Ideal para quem esta comecando do zero",
   },
   {
     title: "Tecnica vocal avancada",
     description:
       "Aprimore apoio, ressonancia, extensao e controle dinamico para alto desempenho.",
     icon: Radio,
+    fit: "Para cantores que querem refinamento tecnico",
   },
   {
     title: "Preparacao para apresentacoes",
     description:
       "Treine interpretacao, presenca de palco e repertorio para shows, testes e eventos.",
     icon: Theater,
+    fit: "Perfeito para palco, gravacoes e audicoes",
   },
 ];
 
@@ -25,7 +28,7 @@ export function Services() {
   return (
     <section
       id="aulas"
-      className="section-shell relative w-full min-w-0 py-16 sm:py-20"
+      className="section-shell section-divider relative w-full min-w-0 py-16 sm:py-20"
     >
       <div
         className="pointer-events-none absolute right-0 top-1/3 -z-10 h-72 w-72 translate-x-1/3 rounded-full bg-[#8ec5ff]/12 blur-3xl"
@@ -48,7 +51,7 @@ export function Services() {
       </header>
 
       <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {classes.map(({ title, description, icon: Icon }, index) => (
+        {classes.map(({ title, description, icon: Icon, fit }, index) => (
           <article
             key={title}
             className="fade-in-up glass soft-hover group relative overflow-hidden rounded-2xl p-7 shadow-xl shadow-black/20"
@@ -74,9 +77,21 @@ export function Services() {
               <p className="mt-3 text-sm leading-relaxed text-blue-100/95">
                 {description}
               </p>
+              <p className="mt-4 text-xs font-medium uppercase tracking-[0.14em] text-[#84d7ff]">
+                {fit}
+              </p>
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-10 text-center">
+        <a
+          href="#contato"
+          className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white transition hover:border-[#84d7ff]/60 hover:bg-white/10"
+        >
+          Quero ajuda para escolher meu plano
+        </a>
       </div>
     </section>
   );

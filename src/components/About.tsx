@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Award, Music2, Users } from "lucide-react";
 
 const highlights = [
@@ -6,18 +7,24 @@ const highlights = [
   { icon: Music2, title: "Metodo pratico e humanizado" },
 ];
 
+const pillars = [
+  "Respiracao, apoio e afinacao com base tecnica simples de aplicar.",
+  "Interpretacao e presenca para cantar com verdade e seguranca.",
+  "Plano de evolucao com foco no repertorio que voce realmente canta.",
+];
+
 export function About() {
   return (
     <section
       id="sobre"
-      className="section-shell relative w-full min-w-0 py-16 sm:py-20"
+      className="section-shell section-divider relative w-full min-w-0 py-16 sm:py-20"
     >
       <div
         className="pointer-events-none absolute left-1/2 top-12 -z-10 h-px w-[min(100%,48rem)] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/15 to-transparent"
         aria-hidden
       />
 
-      <div className="grid min-w-0 grid-cols-1 gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
+      <div className="grid min-w-0 grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
         <div className="fade-in-up min-w-0 space-y-6">
           <div>
             <p className="section-subtitle mb-3">Sobre o estudio</p>
@@ -36,12 +43,32 @@ export function About() {
               ajustes personalizados para voce cantar com liberdade.
             </p>
           </div>
+
+          <ul className="grid gap-3">
+            {pillars.map((pillar) => (
+              <li
+                key={pillar}
+                className="rounded-xl border border-white/12 bg-white/[0.03] px-4 py-3 text-sm text-blue-100/95"
+              >
+                {pillar}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <aside
           className="fade-in-up min-w-0 space-y-3 lg:border-l lg:border-white/10 lg:pl-10"
           style={{ animationDelay: "0.12s" }}
         >
+          <div className="glass overflow-hidden rounded-2xl p-2">
+            <Image
+              src="/2.jpeg"
+              alt="Ambiente de aula no Estudio Vocal"
+              width={640}
+              height={420}
+              className="h-52 w-full rounded-xl object-cover"
+            />
+          </div>
           <p className="mb-1 text-xs font-medium uppercase tracking-[0.18em] text-[#8ec5ff]/80">
             Em numeros
           </p>

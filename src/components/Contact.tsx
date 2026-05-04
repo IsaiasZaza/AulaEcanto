@@ -20,7 +20,7 @@ export function Contact() {
   return (
     <section
       id="contato"
-      className="section-shell relative w-full min-w-0 py-16 sm:py-20"
+      className="section-shell section-divider relative w-full min-w-0 py-16 sm:py-20"
     >
       <div
         className="pointer-events-none absolute left-1/2 bottom-0 -z-10 h-56 w-[min(100%,40rem)] -translate-x-1/2 translate-y-1/3 rounded-full bg-[#1e4c9a]/18 blur-3xl"
@@ -57,6 +57,9 @@ export function Contact() {
                 className="px-10 py-4 text-base"
               />
             </div>
+            <p className="mt-4 text-xs text-blue-200/85 lg:mt-5">
+              Resposta media em poucos minutos durante horario comercial.
+            </p>
           </div>
 
           <div className="relative min-w-0">
